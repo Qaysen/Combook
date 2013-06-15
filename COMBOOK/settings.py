@@ -111,6 +111,7 @@ ROOT_URLCONF = 'COMBOOK.urls'
 WSGI_APPLICATION = 'COMBOOK.wsgi.application'
 
 TEMPLATE_DIRS = (
+    RUTA_PROYECTO.child('templates')
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.

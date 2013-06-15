@@ -4,6 +4,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+
+	url(r'^libros/', 'app.views.libro_Registro'),
  
    	url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
