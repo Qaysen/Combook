@@ -4,9 +4,9 @@
 	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/style.css">
 </head>
 <body>
-	<p id="bloque"> 'nnueva linea' </p>
-	{%for l in libros%}
-		<p>{{l.titulo}}</p>
-	{% endfor %}
-</body>
+	<p id="bloque">LIBROS: </p>
+		{%for l in libros%}
+			<p>------------</p>
+			<p>{{l.codigo}} -- {{l.titulo}} -- {{l.editorial}}</p>
+		{% endfor %}</body>
 </html>

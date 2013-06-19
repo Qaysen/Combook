@@ -7,6 +7,8 @@ urlpatterns = patterns('',
 	url(r'^$','app.views.inicio'),
 
 	url(r'^libros/', 'app.views.libro_Registro'),
+	
+	url(r'^registrar_libro','app.views.registrar_libro'),
  
    	url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

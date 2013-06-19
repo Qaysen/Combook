@@ -1,0 +1,20 @@
+<!DOCTYPE Html>
+<html>
+<head>
+	<title>Registrar Libro</title>
+</head>
+	<center>		
+	{% block contenido %}
+	<h2>  <center>REGISTRAR LIBRO</center> </h2>
+	<form id='formulario' method='POST'>
+		<table>{% csrf_token %}
+			{{formulario}}
+			<tr >
+				<td><input type="submit" name="guardar_libro" value="Guardar"></td>
+			</tr>
+		</table>
+		</center>
+	</form>
+	{% endblock %}
+</body>
+</html>
