@@ -43,12 +43,11 @@
             <li><a href="#">Foros</a></li>
           </ul>
           <div class="busqueda">
-            <form class="navbar-search pull-left">
-                <input type="text" class="search-query" placeholder="Buscar">
-                
-            </form>
+            <form class="navbar-search pull-left" method="POST" action="/buscar/">
+              {% csrf_token %}
+                <input type="text" name="busca_palabra" class="search-query" placeholder="Buscar">
                 <div class="btn-group">
-                    <button class="btn btn-primary"><i class="icon-search"></i></button>
+                    <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
 
                     <!--<a class="btn btn-warning dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -58,7 +57,9 @@
                       <li class="divider"></li>
                       <li><a href="#"><i class="i"></i> Make admin</a></li>
                     </ul>-->
-                 </div>
+                </div>
+            </form>
+                
           </div>
       </div>
 </div>
