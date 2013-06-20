@@ -24,12 +24,15 @@
         <script src="{{STATIC_URL}}js/main.js"></script>
 
         <div  class="encabezado">
-            <table border=0 cellpadding="50px" >
+            <table border= 2 cellpadding="50px"  bordercolor="D9CFCF" width="100%">
               <tr >
-                <td><img src="{{MEDIA_URL}}img/libros1.jpg"></td>
-                <td>fgfd</td>
-
-
+                
+                <div> 
+                    <td  width="30%"> <p aling="right"> Aca ira una imagen de :COMBOOK</p></td>
+                </div>
+                <td>
+                  
+               </td>
 
               </tr>
             </table>
@@ -59,8 +62,31 @@
                  </div>
       </div>
 
-   
 </div>
+
+  <form class="form-horizontal" >
+                        <div class="control-group">
+                          <label class="control-label" for="inputusuario">Usuario</label>
+                          <div class="controls">
+                            <input type="text" id="inputUsuario" placeholder="Usuario">
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <label class="control-label" for="inputPassword">Password</label>
+                          <div class="controls">
+                            <input type="password" id="inputPassword" placeholder="Password">
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <div class="controls">
+                            <label class="checkbox">
+                              <input type="checkbox"> Recordarme
+                            </label>
+                            <button type="submit" class="btn">Sign in</button>
+                          </div>
+                        </div>
+                      </form>
+
 
 </body>
 </html>
