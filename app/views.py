@@ -12,6 +12,9 @@ def libro_Registro(request):
 def inicio (request):
 	return render_to_response('base.html',context_instance=RequestContext(request))
 
+def inicio (request):
+	return render_to_response('buscar_libros.html',context_instance=RequestContext(request))
+
 def registrar_libro(request):
 	if request.method=='POST':
 		formulario = RegLibroForm(request.POST,request.FILES)
