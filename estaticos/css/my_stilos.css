@@ -63,3 +63,36 @@ margin-top:20px;
 text-align:center;
 width:99px;
 }
+.imagen
+{
+	width: 40px;
+	height: 40px;
+}
+.busqueda
+{
+	float: right;
+}
+.it
+{
+	width: 20px;
+	height: 20px;
+}
+
+.if
+{
+	width: 20px;
+	height: 20px;
+}
+.ig
+{
+	width: 20px;
+	height: 20px;
+}
+
+#title
+{
+	padding: 30px;
+	font-family: 'Advent Pro', sans-serif;
+	font-size: 60px;
+	text-align: center;
+}
