@@ -1,3 +1,9 @@
+body{
+	background:url("/estaticos/css/fondo.jpg") repeat;
+
+
+}
+
 .s1{
 	background: #b1c6de;
 	min-height: 50px;
@@ -9,11 +15,17 @@
 	width: 90%;
 	margin: 1px 30px 1px 85px;
 	}
+.contenido1
+{
+	background: #b1c6de;
+	padding: 0px 1px 0px 1px;
+	width: 90%;
+}
 
 .pie
 {
 	background: #151515;
-	min-height: 100px;
+	min-height: 110px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -22,6 +34,7 @@
 	margin-left: 130px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+
 }
 .i2
 {

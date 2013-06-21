@@ -13,10 +13,10 @@ def inicio (request):
 	
 	return render_to_response('base.html',context_instance=RequestContext(request))
 
-<<<<<<< HEAD
+
 def inicio (request):
 	return render_to_response('buscar_libros.html',context_instance=RequestContext(request))
-=======
+
 def busqueda(request):
 	if request.method == "POST":
 		buscar = request.POST["busca_palabra"]
@@ -26,7 +26,6 @@ def busqueda(request):
 			{'libros':libros},
 			context_instance=RequestContext(request)
 		)
->>>>>>> 2a5d4dfbdc30b5162cd118912f551f07e9cbb218
 
 def registrar_libro(request):
 	if request.method=='POST':
