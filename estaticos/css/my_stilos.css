@@ -63,6 +63,7 @@ margin-top:20px;
 text-align:center;
 width:99px;
 }
+
 .imagen
 {
 	width: 40px;
@@ -71,22 +72,36 @@ width:99px;
 .busqueda
 {
 	float: right;
+	margin-top: -3px;
+	margin-bottom: 2px;
 }
 .it
 {
 	width: 20px;
 	height: 20px;
+	vertical-align: bottom;
+	margin-bottom: 5px;
+	margin-left:110px; 
 }
 
 .if
 {
 	width: 20px;
 	height: 20px;
+	vertical-align: bottom;
+	margin-bottom: 5px;
+	margin-left: 0px;
+
 }
 .ig
 {
 	width: 20px;
-	height: 20px;
+	height: 17px;
+	vertical-align: bottom;
+	margin-bottom: 7px;
+	margin-left: 5px;
+
+
 }
 
 #title
@@ -95,4 +110,5 @@ width:99px;
 	font-family: 'Advent Pro', sans-serif;
 	font-size: 60px;
 	text-align: center;
+	color: #151515;
 }

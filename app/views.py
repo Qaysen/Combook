@@ -10,11 +10,34 @@ def libro_Registro(request):
 	return render_to_response('libros.html',dic,context_instance=RequestContext(request))
 
 def inicio (request):
+<<<<<<< HEAD
 	return render_to_response('inicio.html',context_instance=RequestContext(request))
+=======
+	
+	return render_to_response('base.html',context_instance=RequestContext(request))
+>>>>>>> 20a13269d1b86ce5193bf50275ac5fa5b6e3f8d8
+
+
+def inicio (request):
+	return render_to_response('buscar_libros.html',context_instance=RequestContext(request))
+
+def busqueda(request):
+	if request.method == "POST":
+		buscar = request.POST["busca_palabra"]
+		libros = Libro.objects.filter(titulo__icontains=buscar)
+		return render_to_response(
+			'busqueda.html',
+			{'libros':libros},
+			context_instance=RequestContext(request)
+		)
 
 def registrar_libro(request):
 	if request.method=='POST':
+		print request.POST
+		for i in request.POST.items():
+			print i
 		formulario = RegLibroForm(request.POST,request.FILES)
+
 		if formulario.is_valid():
 			formulario.save()
 			return HttpResponseRedirect('/libros')

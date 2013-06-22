@@ -5,8 +5,11 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
 	url(r'^$','app.views.inicio'),
+	url(r'^$','app.views.buscar_libros'),
 
 	url(r'^libros/', 'app.views.libro_Registro'),
+
+	url(r'^buscar/', 'app.views.busqueda'),
 	
 	url(r'^registrar_libro','app.views.registrar_libro'),
  

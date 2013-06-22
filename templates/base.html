@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="{{STATIC_URL}}css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="{{STATIC_URL}}css/my_stilos.css">
         <link rel="stylesheet" href="{{STATIC_URL}}css/main.css">
+           <link rel="stylesheet" href="{{STATIC_URL}}css/estilos_buscar.css">
         <link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,500' rel='stylesheet'>
 
         <script src="{{STATIC_URL}}js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -42,12 +43,11 @@
             <li><a href="#">Foros</a></li>
           </ul>
           <div class="busqueda">
-            <form class="navbar-search pull-left">
-                <input type="text" class="search-query" placeholder="Buscar">
-                
-            </form>
+            <form class="navbar-search pull-left" method="POST" action="/buscar/">
+              {% csrf_token %}
+                <input type="text" name="busca_palabra" class="search-query" placeholder="Buscar">
                 <div class="btn-group">
-                    <button class="btn btn-primary"><i class="icon-search"></i></button>
+                    <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
 
                     <!--<a class="btn btn-warning dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -57,7 +57,9 @@
                       <li class="divider"></li>
                       <li><a href="#"><i class="i"></i> Make admin</a></li>
                     </ul>-->
-                 </div>
+                </div>
+            </form>
+                
           </div>
       </div>
 </div>
@@ -78,8 +80,8 @@
         </div>
         <div class="span3 pie">
           <img class="i3" width='40px' height='40px' src="{{MEDIA_URL}}img/im3.jpg" ALIGN=MIDDLE>
-          <p id="parrafo2"><strong>Contact</strong><br>http://qaysen.com</p>
-          <!--<img class="it" src="{{MEDIA_URL}}img/im5.jpg"> <img class="if" src="{{MEDIA_URL}}img/im6.jpg"><img class="ig" src="{{MEDIA_URL}}img/im7.jpg">-->
+          <p id="parrafo2"><strong>Contact</strong><br>http://qaysen.com</p><br>
+          <img class="it" src="{{MEDIA_URL}}img/im5.jpg"> <img class="if" src="{{MEDIA_URL}}img/im6.jpg"><img class="ig" src="{{MEDIA_URL}}img/im7.jpg">
         </div>
         <div class="span3 pie">
           <img class="i4" width='30px' height='40px' src="{{MEDIA_URL}}img/im4.jpg" ALIGN=top>
