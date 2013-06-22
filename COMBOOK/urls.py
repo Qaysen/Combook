@@ -4,6 +4,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+	
 	url(r'^$','app.views.inicio'),
 	url(r'^$','app.views.buscar_libros'),
 

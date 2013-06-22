@@ -10,15 +10,13 @@ def libro_Registro(request):
 	return render_to_response('libros.html',dic,context_instance=RequestContext(request))
 
 def inicio (request):
-<<<<<<< HEAD
 	return render_to_response('inicio.html',context_instance=RequestContext(request))
-=======
 	
 	return render_to_response('base.html',context_instance=RequestContext(request))
->>>>>>> 20a13269d1b86ce5193bf50275ac5fa5b6e3f8d8
 
 
-def inicio (request):
+
+def buscar_libros (request):
 	return render_to_response('buscar_libros.html',context_instance=RequestContext(request))
 
 def busqueda(request):
