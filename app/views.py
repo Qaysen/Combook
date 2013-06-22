@@ -10,7 +10,7 @@ def libro_Registro(request):
 	return render_to_response('libros.html',dic,context_instance=RequestContext(request))
 
 def inicio (request):
-	return render_to_response('base.html',context_instance=RequestContext(request))
+	return render_to_response('inicio.html',context_instance=RequestContext(request))
 
 def registrar_libro(request):
 	if request.method=='POST':
