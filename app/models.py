@@ -13,9 +13,7 @@ class Libro(models.Model):
 	codigo             = models.CharField(max_length=200)
 	titulo             = models.CharField(max_length=200)
 	editorial          = models.CharField(max_length=200)
-	dia_publicacion  = models.CharField(max_length=20)
-	mes_publicacion  = models.CharField(max_length=20)
-	anno_publicacion  = models.CharField(max_length=20)
+	fecha_publicacion  = models.CharField(max_length=20)
 	def __unicode__(self):
 		return "%s "%(self.titulo)
 		
