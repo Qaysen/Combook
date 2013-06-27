@@ -4,4 +4,6 @@ from app.models import *
 admin.site.register(Alumno)
 admin.site.register(Autor)
 admin.site.register(Libro)
-admin.site.register(Escribir)
+admin.site.register(Editorial)
+admin.site.register(Persona)
+admin.site.register(Tema)
