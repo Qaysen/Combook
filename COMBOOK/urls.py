@@ -25,7 +25,7 @@ urlpatterns = patterns('',
 
 	url(r'^buscar/', 'app.views.busqueda'),
 	
-	url(r'^registrar_libro','app.views.registrar_libro'),
+	url(r'^registrar_libro/','app.views.registrar_libro'),
  
    	url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
