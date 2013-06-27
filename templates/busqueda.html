@@ -1,3 +1,7 @@
+<style>
+	img {width: 100px;}
+</style>
+
 <html>
 <head>
 	<title>busqueda</title>
@@ -8,6 +12,8 @@
 			<p>------------</p>
 			<p>{{l.titulo}}</p>
 			<p>{{l.editorial}}</p>
+			<img src="{{MEDIA_URL}}{{l.portada}}">
+			
 	{% endfor %}</body>
 </body>
 </html>

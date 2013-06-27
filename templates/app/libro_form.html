@@ -1,12 +1,11 @@
-<!DOCTYPE Html>
 <html>
 <head>
-	<title>Registrar Libro</title>
+	<meta Charset="UTF-8">
+	<title>crear</title>
 </head>
-	<center>		
-	{% block contenido %}
-	<h2>  <center>REGISTRAR LIBRO</center> </h2>
-	<form id='libro_form' method='POST'>{% csrf_token %}
+<body>
+	<form method="POST">
+		<form id='libro_form' method='POST'>{% csrf_token %}
 		<table>			
 			<tr>
 				<td>codigo</td>
@@ -35,7 +34,7 @@
 			<tr>
 				<td>Portada Libro</td>
 				<td>
-					<input type='file' name='portada' />
+					Select a file: <input type="file" name="img">
 				</td>
 			</tr>
 			<tr>
@@ -45,6 +44,5 @@
 		</table>
 		</center>
 	</form>
-	{% endblock %}
 </body>
 </html>

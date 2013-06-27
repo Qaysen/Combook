@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.urlresolvers import reverse
 class Alumno(models.Model):
 	nombre             = models.CharField(max_length=200)
 	apellido           = models.CharField(max_length=10)
@@ -10,10 +10,14 @@ class Alumno(models.Model):
 		
 class Libro(models.Model):
 	"""docstring for libro"""
-	codigo             = models.CharField(max_length=200)
-	titulo             = models.CharField(max_length=200)
+	codigo             = models.CharField(max_length=10)
+	titulo             = models.CharField(max_length=30)
 	editorial          = models.CharField(max_length=200)
-	fecha_publicacion  = models.CharField(max_length=20)
+	fecha_publicacion  = models.DateField(max_length=20)
+	portada			   = models.ImageField(upload_to='portadas')
+
+	def get_absolute_url(self):
+		return reverse("libro_detail",kwargs={'pk':self.id})
 	def __unicode__(self):
 		return "%s "%(self.titulo)
 		
