@@ -3,12 +3,15 @@ from django.conf import settings
 from django.contrib import admin
 from app.views import LibroListView,LibroCreateView,LibroUpdateView,LibroDetailView
 
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
 	
 	url(r'^$','app.views.inicio'),
-	
+
+
+	# USANDO CLASES!-------------------------------------------------
 	url(r'^update/(?P<pk>\d+)$',LibroUpdateView.as_view(),name='libro_update'),
 
 	url(r'^libro/(?P<pk>\d+)$',LibroDetailView.as_view(),name='libro_detail'),
@@ -19,7 +22,8 @@ urlpatterns = patterns('',
 
 	url(r'^crear/',LibroCreateView.as_view(),name='libro_create'),
 
-	
+	url(r'^$','app.views.inicio'),
+	#---------------------------------------------------------------
 	url(r'^libros/', 'app.views.libro_Registro'),
 
 	url(r'^buscar/', 'app.views.busqueda'),

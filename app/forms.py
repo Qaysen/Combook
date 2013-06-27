@@ -1,7 +1,7 @@
 #encoding:utf-8
 from django.forms import ModelForm
 from django import forms
-from models import Libro
+from models import *
 
 class RegLibroForm(ModelForm):
 	#codigo = forms.RegexField(max_length=15, regex=r'^[a-zA-Z0-9 ]+$', help_text = "Ingrese codigo", error_message = "Solo caracteres alfanumericos.")

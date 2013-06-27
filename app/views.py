@@ -3,6 +3,7 @@ from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from .forms import RegLibroForm
 from app.models import *
+#USANDO CLASES!! ---------------------------------------------------------
 from django.views.generic import ListView,CreateView,UpdateView,DetailView
 
 class LibroUpdateView(UpdateView):
@@ -18,9 +19,9 @@ class LibroCreateView(CreateView):
 class LibroListView(ListView):
 	"""docstring for EntryListView"""
 	model= Libro
-	template_name='libro_list.html'
+	template_name='app/libro_list.html' #ubicacion por defecto(puedes cambiarla)
 	context_object_name='libro_list'
-
+#--------------------------------------------------------------------------
 def libro_Registro(request):
 	libros = Libro.objects.all()
 	dic = {"libros":libros}
@@ -28,7 +29,7 @@ def libro_Registro(request):
 
 def inicio (request):
 	return render_to_response('inicio.html','base.html',context_instance=RequestContext(request))
-
+	
 def buscar_libros (request):
 	return render_to_response('buscar_libros.html',context_instance=RequestContext(request))
 
