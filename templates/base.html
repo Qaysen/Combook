@@ -19,17 +19,11 @@
     </head>
    
     <body>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="{{STATIC_URL}}js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
-        <script src="{{STATIC_URL}}js/vendor/bootstrap.min.js"></script>
-
-        <script src="{{STATIC_URL}}js/main.js"></script>
 
    <div class="row-fluid">
             <div class="span12 s1">
                <img width='160px' height='120px' src="{{MEDIA_URL}}img/libros1.jpg" align="left">
-                <p id="title">COOMBOOK</p>
+                <embed src="http://www.ecdotica.com/ads/banner-leal2.swf" width="728" height="90" flashvars=""><p id="title">COOMBOOK</p>
    </div>
 
 <div class="row-fluid">
@@ -40,7 +34,14 @@
           <ul class="nav">
             <li class="active"><a href="#">Inicio</a></li>
             <li><a href="/prueba">Noticias</a></li>
-            <li><a href="#">Foros</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Registro
+                 <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/registrar_categoria">Libro</a></li>
+              </ul>
+          </li>
           </ul>
           <div class="busqueda">
             <form class="navbar-search pull-left" method="POST" action="/buscar/">
@@ -48,15 +49,6 @@
                 <input type="text" name="busca_palabra" class="search-query" placeholder="Buscar">
                 <div class="btn-group">
                     <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
-
-                    <!--<a class="btn btn-warning dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#"><i class="icon-pencil"></i> Editar</a></li>
-                      <li><a href="#"><i class="icon-trash"></i> Eliminar</a></li>
-                      <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#"><i class="i"></i> Make admin</a></li>
-                    </ul>-->
                 </div>
             </form>
                 
@@ -90,5 +82,15 @@
     </div>
     
   </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{STATIC_URL}}js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+    <script src="{{STATIC_URL}}js/vendor/bootstrap.min.js"></script>
+
+    <script src="{{STATIC_URL}}js/main.js"></script>
+    {% block js %}
+
+    {% endblock %}
 </body>
 </html>

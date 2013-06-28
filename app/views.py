@@ -3,6 +3,20 @@ from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from .forms import RegLibroForm
 from app.models import *
+from django.views.generic import CreateView,ListView,UpdateView
+from .models import Libro
+
+class EntryCreateView(CreateView):
+	model=Libro
+	template_name="libro_form.html"
+
+class EntryListView(ListView):
+	model = Libro
+	template_name="libros.html"
+	context_object_name="libro_list"
+
+class EntryUpdateView(UpdateView):
+	model= Libro
 
 def libro_Registro(request):
 	libros = Libro.objects.all()
@@ -42,4 +56,8 @@ def registrar_libro(request):
 	else:
 		formulario = RegLibroForm()
 	return render_to_response('registrar_libro.html',{'formulario':formulario},context_instance=RequestContext(request))
- 
+
+
+
+def registrar_categoria(request):
+	return render_to_response('registrar_categoria.html',context_instance=RequestContext(request))

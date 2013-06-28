@@ -1,11 +1,9 @@
 body{
-	background:url("/estaticos/css/fondo.jpg") repeat;
-
-
+	background:#00538D;
 }
 
 .s1{
-	background: #b1c6de;
+	background: #66889B;
 	min-height: 50px;
 }
 
@@ -17,7 +15,6 @@ body{
 	}
 .contenido1
 {
-	background: #b1c6de;
 	padding: 0px 1px 0px 1px;
 	width: 90%;
 }
@@ -179,4 +176,39 @@ body{
 
 .reg{
 	margin-left: 20%;
+}
+
+.categoria1
+{
+
+	padding-right: 0px;
+	padding-left: 98px;
+
+}
+
+.categoria2
+{
+	background: #FFFFFF;
+	min-height: 160px;
+	margin-left: 0px !important;
+	width: 600px;
+	margin: 110px 0px 0px 0px;
+}
+.cont_categoria
+{
+	padding-left: 10px;
+	margin: 5px 40px 10px;
+}
+#sub
+{
+	background:white;
+	padding: 5px 50px;
+	background:rgb(86, 179, 90);
+	margin:0px;
+}
+
+.p_descripcion
+{
+	font-size: 14px;
+	text-align: justify;
 }

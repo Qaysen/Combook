@@ -1,20 +1,52 @@
-<!DOCTYPE Html>
-<html>
-<head>
-	<title>Registrar Libro</title>
-</head>
-	<center>		
-	{% block contenido %}
-	<h2>  <center>REGISTRAR LIBRO</center> </h2>
-	<form id='formulario' method='POST'>
-		<table>{% csrf_token %}
-			{{formulario}}
-			<tr >
-				<td><input type="submit" name="guardar_libro" value="Guardar"></td>
-			</tr>
-		</table>
-		</center>
-	</form>
+{% extends "base.html" %}
+
+{% block title %}
+registrar_libro
+{% endblock %}
+
+
+
+	{% block content %}
+
+	<form class="form-horizontal">
+		<legend><center>REGISTRAR LIBRO</center></legend>
+		<div class="control-group">
+    		<label class="control-label" for="inputEmail">Nombre libro</label>
+    		<div class="controls">
+      			<input type="text" placeholder="Type something…">
+    		</div>
+  		</div>
+
+  		<div class="control-group">
+    		<label class="control-label" for="inputEmail">Precio</label>
+    		<div class="controls">
+      			<div class="input-prepend input-append">
+  					<span class="add-on">$</span>
+ 				    <input class="span2" id="appendedPrependedInput" type="text">
+  					<span class="add-on">.00</span>
+				</div>
+    		</div>
+  		</div>
+
+  		<div class="control-group">
+    		<label class="control-label" for="inputEmail">Email</label>
+    		<div class="controls">
+      			<input type="text" id="inputEmail" placeholder="Email">
+    		</div>
+  		</div>
+  		<div class="control-group">
+    		<label class="control-label" for="inputPassword">Password</label>
+    		<div class="controls">
+      			<input type="password" id="inputPassword" placeholder="Password">
+    		</div>
+  		</div>
+ 	    <div class="control-group">
+    		<div class="controls">
+      			<label class="checkbox">
+        			<input type="checkbox"> Remember me
+     		    </label>
+      			<button type="submit" class="btn">Sign in</button>
+    		</div>
+  		</div>
+   </form>
 	{% endblock %}
-</body>
-</html>
