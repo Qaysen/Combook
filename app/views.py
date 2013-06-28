@@ -2,7 +2,9 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from .forms import RegLibroForm
+from django.views.generic import CreateView,ListView
 from app.models import *
+<<<<<<< HEAD
 from django.views.generic import CreateView,ListView,UpdateView
 from .models import Libro
 
@@ -17,20 +19,56 @@ class EntryListView(ListView):
 
 class EntryUpdateView(UpdateView):
 	model= Libro
+=======
+<<<<<<< HEAD
+>>>>>>> cfe17c68071eebff876475f8b5939c678aca1819
 
+
+class EntryCreateView(CreateView):
+	model=Libro
+	template_name="libro_form.html"
+
+class EntryListView(ListView):
+	model=Libro
+	template_name="libro_list.html"
+	context_object_name="entry_list"
+
+
+=======
+#USANDO CLASES!! ---------------------------------------------------------
+from django.views.generic import ListView,CreateView,UpdateView,DetailView
+
+class LibroUpdateView(UpdateView):
+	model=Libro
+
+class LibroDetailView(DetailView):
+	model = Libro
+
+#crear libro
+class LibroCreateView(CreateView):
+	model=Libro
+#listar libros
+class LibroListView(ListView):
+	"""docstring for EntryListView"""
+	model= Libro
+	template_name='app/libro_list.html' #ubicacion por defecto(puedes cambiarla)
+	context_object_name='libro_list'
+#--------------------------------------------------------------------------
+>>>>>>> abde1e6443625d970739dffd34e8f97b96a08de4
 def libro_Registro(request):
 	libros = Libro.objects.all()
 	dic = {"libros":libros}
 	return render_to_response('libros.html',dic,context_instance=RequestContext(request))
 
 def inicio (request):
-	return render_to_response('inicio.html',context_instance=RequestContext(request))
+	return render_to_response('inicio.html','base.html',context_instance=RequestContext(request))
 	
-	return render_to_response('base.html',context_instance=RequestContext(request))
+<<<<<<< HEAD
 
-
-
+def buscar_libros(request):
+=======
 def buscar_libros (request):
+>>>>>>> abde1e6443625d970739dffd34e8f97b96a08de4
 	return render_to_response('buscar_libros.html',context_instance=RequestContext(request))
 
 def busqueda(request):
@@ -48,7 +86,7 @@ def registrar_libro(request):
 		print request.POST
 		for i in request.POST.items():
 			print i
-		formulario = RegLibroForm(request.POST,request.FILES)
+		formulario = RegLibroForm(request.POST)
 
 		if formulario.is_valid():
 			formulario.save()
@@ -57,7 +95,14 @@ def registrar_libro(request):
 		formulario = RegLibroForm()
 	return render_to_response('registrar_libro.html',{'formulario':formulario},context_instance=RequestContext(request))
 
+<<<<<<< HEAD
 
 
 def registrar_categoria(request):
 	return render_to_response('registrar_categoria.html',context_instance=RequestContext(request))
+=======
+def mostrar_libro(request):
+	return render_to_response('mostrar_libro.html',context_instance=RequestContext(request))
+
+ 
+>>>>>>> cfe17c68071eebff876475f8b5939c678aca1819

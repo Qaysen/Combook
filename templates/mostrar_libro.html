@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}
+mostrar libro
+{% endblock %}
+
+
+{% block content %}
+
+<div class="row-fluid">
+		<div class="span4">
+			<div align="center">
+			<img width='300px' height='300px' src="{{MEDIA_URL}}img/imglibro.jpg" class="img-rounder">
+     		</div>
+		</div>
+		<div class="span8">
+			<div class="row-fluid">
+				<div class="span6">
+					<p>Código</p>
+					<p>título</p>
+					<p>Editorial</p>
+					<p>Fecha Publicación</p>
+				</div>
+				<div class="span6">
+				</div>
+			</div>
+		</div>
+</div>
+<br>
+<div class="row-fluid">
+	<div class="span4">
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="clase">
+			<button class="btn btn-inverse" type="button" >solicitar libro</button>
+		</div>
+	</div>
+	<div class="span8">
+	<h1 align="center">INDICE</h1>
+
+		<br>
+		Presentación
+		<br>
+		Introducción: El estudio de la biología en la actualidad
+		<br>
+		Sección 1. La unidad de la vida
+		<br>
+		Sección 2. Genética: las bases celulares y químicas de la herencia
+		<br>
+		Sección 3. Los genes en acción: estructura, expresión y control 
+		de la información genética
+		<br>
+		Sección 4. Evolución
+		<br>
+		Sección 5. La diversidad de la vida
+		<br>
+		Sección 6. Biología de los animales
+		<br>
+		Sección 7. Biología de las plantas
+		<br>
+		Sección 8. Ecología
+		<br>
+		Apéndices	
+	</div>
+</div>
+{% endblock %}
