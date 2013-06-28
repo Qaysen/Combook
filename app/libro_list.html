@@ -1,8 +1,9 @@
-{%for x in object_list %}
+{%for x in libro_list %}
 	<br>
 	{{x.codigo}}
 	{{x.titulo}}
 	{{x.editorial}}
+	{{x.portada}}
 	{%empty%}
 	<p>No se encontro las entradas</p>
 {%endfor%}

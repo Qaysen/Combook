@@ -2,14 +2,16 @@
 from django.db import models
 from django.core.urlresolvers import reverse
 
+
 IDIOMA = (
     ('ES', 'Español'),
     ('EN', 'Ingles'),
     ('AL', 'Aleman'),
     ('PO', 'Portugues'),
-    ('tr', 'turco'),
-    ('uk', 'ucraniano'),
-    ('ru', 'ruso'),
+    ('TR', 'Turco'),
+    ('UK', 'Ucraniano'),
+    ('RU', 'Ruso'),
+    ('JA', 'Japones'),
 )
 
 
@@ -25,11 +27,11 @@ class Alumno(models.Model):
 
 
 class Autor(models.Model):
-
     nombre = models.CharField(max_length=100)
     seudonimo = models.CharField(max_length=60, null=True, blank=True)
-    pais = models.CharField(max_length=30)
-    descripcion = models.TextField()
+    pais = models.CharField(max_length=60)
+    descripcion = models.TextField(max_length=5000, null=True, blank=True)
+    foto = models.ImageField(upload_to='foto_autor')
 
     def __str__(self):
         return self.nombre
@@ -50,23 +52,21 @@ class Editorial(models.Model):
 
 
 class Libro(models.Model):
-
     titulo = models.CharField(max_length=100)
     genero = models.CharField(max_length=50)
-    idioma = models.CharField(max_length=30, choices=IDIOMA)
-    numero_edicion = models.IntegerField(max_length=10)
-    portada = models.ImageField(upload_to='portadas/')
     sinopsis = models.TextField()
+    idioma = models.CharField(max_length=30, choices=IDIOMA)
+    portada = models.ImageField(upload_to='portadas/')
+    numero_edicion = models.IntegerField(max_length=10)
     autores = models.ManyToManyField(Autor)
-    fk_editorial = models.ForeignKey(Editorial)
+    editorial = models.ForeignKey(Editorial)
 
     def __str__(self):
         return self.titulo
 
 
 class Tema(models.Model):
-
-    fk_libro = models.ForeignKey(Libro)
+    libro = models.ForeignKey(Libro)
     texto = models.CharField(max_length=40)
 
     def __str__(self):
