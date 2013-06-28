@@ -1,12 +1,10 @@
 body{
 	background:url("/estaticos/css/fondo.jpg") repeat;
-
-
 }
 
 .s1{
 	background: #b1c6de;
-	min-height: 50px;
+	min-height: 10px;
 }
 
 .s2{
@@ -27,7 +25,7 @@ body{
 	background: #151515;
 	min-height: 110px;
 	margin-top: 10px;
-	margin-bottom: 10px;kcbasbkjjcsk
+	margin-bottom: 10px;
 }
 
 .i1
@@ -169,7 +167,7 @@ body{
 }
 
 .alinear{
-	margin-left: -25%;
+	margin-left: -20%;
 }
 
 .alinear1{
