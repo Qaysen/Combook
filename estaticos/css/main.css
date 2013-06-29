@@ -1,19 +1,16 @@
 body{
-<<<<<<< HEAD
 	background:#00538D;
 }
 
 .s1{
 	background: #66889B;
 	min-height: 50px;
-=======
 	background:url("/estaticos/css/fondo.jpg") repeat;
 }
 
 .s1{
 	background: #b1c6de;
 	min-height: 10px;
->>>>>>> cfe17c68071eebff876475f8b5939c678aca1819
 }
 
 .s2{
@@ -185,7 +182,6 @@ body{
 
 .reg{
 	margin-left: 20%;
-<<<<<<< HEAD
 }
 
 .categoria1
@@ -221,6 +217,4 @@ body{
 {
 	font-size: 14px;
 	text-align: justify;
-=======
->>>>>>> cfe17c68071eebff876475f8b5939c678aca1819
 }
