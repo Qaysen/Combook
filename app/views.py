@@ -27,7 +27,20 @@ class EntryCreateView(CreateView):
 class EntryListView(ListView):
 	model=Libro
 	template_name="libro_list.html"
-	context_object_name="entry_list"
+
+class LibroListView(ListView):
+	"""docstring for EntryListView"""
+	model= Libro
+	template_name='app/libro_list.html' #ubicacion por defecto(puedes cambiarla)
+
+class BuscarLibroView(LibroListView):
+	def get_queryset(self):
+		queryset = super(BuscarLibroView, self).get_queryset()
+		buscar = self.request.GET.get('q',None)
+		print buscar
+		if buscar:
+			return queryset.filter(titulo__icontains=buscar)
+		return queryset
 
 #USANDO CLASES!! ---------------------------------------------------------
 from django.views.generic import ListView,CreateView,UpdateView,DetailView

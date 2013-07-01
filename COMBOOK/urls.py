@@ -3,7 +3,7 @@ from django.conf import settings
 from django.contrib import admin
 from app.views import EntryCreateView,EntryListView,EntryUpdateView
 from app.views import EntryListView,EntryCreateView
-from app.views import LibroListView,LibroCreateView,LibroUpdateView,LibroDetailView
+from app.views import LibroListView,LibroCreateView,LibroUpdateView,LibroDetailView,BuscarLibroView
 
 admin.autodiscover()
 
@@ -19,6 +19,8 @@ urlpatterns = patterns('',
 	url(r'^buscar_libros/','app.views.buscar_libros'),
 
 	# USANDO CLASES!-------------------------------------------------
+	url(r'^busca/',BuscarLibroView.as_view(),name='busca_libro'),
+
 	url(r'^update/(?P<pk>\d+)$',LibroUpdateView.as_view(),name='libro_update'),
 
 	url(r'^libro/(?P<pk>\d+)$',LibroDetailView.as_view(),name='libro_detail'),
